@@ -1,6 +1,6 @@
 # GitHub Activity in Readme
 
-Updates `README.md` with the recent GitHub activity of a user.
+Updates `README.md` with the recent GitHub activity of a user. Forked from jamesgeorge007/github-activity-readme.
 
 <img width="735" alt="profile-repo" src="https://user-images.githubusercontent.com/25279263/87703301-3aa4a500-c7b8-11ea-8eb6-245121997a7b.png">
 
@@ -42,6 +42,8 @@ Please note that only those public events that belong to the following list show
 - `ReleaseEvent`
 - `IssueCommentEvent`
 - `PullRequestEvent`
+- `PushEvent`
+- `CreateEvent`
 
 You can find an example [here](https://github.com/jamesgeorge007/jamesgeorge007/blob/master/.github/workflows/update-readme.yml).
 
