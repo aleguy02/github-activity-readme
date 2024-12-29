@@ -168,8 +168,11 @@ const serializers = {
     )} in ${toUrlFormat(item.repo.name)}`;
   },
   PushEvent: (item) => {
-    return `⬆️ Pushed ${item.payload.size} commit(s) to ${toUrlFormat(item.repo.name)}`
-  }
+    return `⬆️ Pushed ${item.payload.size} commit(s) to ${toUrlFormat(item.repo.name)}`;
+  },
+  CreateEvent: (item) => {
+    return `📔 Created new repository ${toUrlFormat(item.repo.name)}`;
+  },
 };
 
 Toolkit.run(
