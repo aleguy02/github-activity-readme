@@ -20551,8 +20551,11 @@ const serializers = {
     )} in ${toUrlFormat(item.repo.name)}`;
   },
   PushEvent: (item) => {
-    return `⬆️ Pushed ${item.payload.size} commit(s) to ${toUrlFormat(item.repo.name)}`
-  }
+    return `⬆️ Pushed ${item.payload.size} commit(s) to ${toUrlFormat(item.repo.name)}`;
+  },
+  CreateEvent: (item) => {
+    return `📔 Created new repository ${toUrlFormat(item.repo.name)}`;
+  },
 };
 
 Toolkit.run(
@@ -20574,10 +20577,6 @@ Toolkit.run(
       .slice(0, MAX_LINES)
       // Call the serializer to construct a string
       .map((item) => serializers[item.type](item));
-
-    // REMOVE
-    tools.log.debug(content);
-    //
 
     const readmeContent = fs
       .readFileSync(`./${TARGET_FILE}`, "utf-8")
